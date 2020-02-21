@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var vm: ContentViewModel
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Picker("Picker", selection: $vm.selectedIndex) {
+                ForEach(0..<vm.languages.count) { index in
+                    Text(self.vm.languages[index])
+                        .tag(index)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            Spacer()
+            Text(vm.sharedText).font(.largeTitle)
+            Spacer()
+        }
+        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ContentViewModel())
     }
 }

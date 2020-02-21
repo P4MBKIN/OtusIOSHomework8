@@ -13,7 +13,35 @@
 		CE47666A2400460B006F8858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4766692400460B006F8858 /* Assets.xcassets */; };
 		CE47666D2400460B006F8858 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE47666C2400460B006F8858 /* Preview Assets.xcassets */; };
 		CE4766702400460B006F8858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE47666E2400460B006F8858 /* LaunchScreen.storyboard */; };
+		CE47667824004E8E006F8858 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47667724004E8E006F8858 /* ContentViewModel.swift */; };
+		CE47668024005485006F8858 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47667F24005485006F8858 /* ShareViewController.swift */; };
+		CE47668324005485006F8858 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE47668124005485006F8858 /* MainInterface.storyboard */; };
+		CE47668724005485006F8858 /* HomeWork8SharedExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE47667D24005485006F8858 /* HomeWork8SharedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE47668524005485006F8858 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE47665824004605006F8858 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE47667C24005485006F8858;
+			remoteInfo = HomeWork8SharedExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE47668B24005485006F8858 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE47668724005485006F8858 /* HomeWork8SharedExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE47666024004605006F8858 /* HomeWork8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork8.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +52,24 @@
 		CE47666C2400460B006F8858 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE47666F2400460B006F8858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4766712400460B006F8858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE47667724004E8E006F8858 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CE47667D24005485006F8858 /* HomeWork8SharedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HomeWork8SharedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE47667F24005485006F8858 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CE47668224005485006F8858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CE47668424005485006F8858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE47668C240054B7006F8858 /* HomeWork8.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomeWork8.entitlements; sourceTree = "<group>"; };
+		CE47668D24005773006F8858 /* HomeWork8SharedExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomeWork8SharedExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE47665D24004605006F8858 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE47667A24005485006F8858 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CE47666224004605006F8858 /* HomeWork8 */,
+				CE47667E24005485006F8858 /* HomeWork8SharedExtension */,
 				CE47666124004605006F8858 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CE47666024004605006F8858 /* HomeWork8.app */,
+				CE47667D24005485006F8858 /* HomeWork8SharedExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,9 +100,11 @@
 		CE47666224004605006F8858 /* HomeWork8 */ = {
 			isa = PBXGroup;
 			children = (
+				CE47668C240054B7006F8858 /* HomeWork8.entitlements */,
 				CE47666324004605006F8858 /* AppDelegate.swift */,
 				CE47666524004605006F8858 /* SceneDelegate.swift */,
 				CE47666724004606006F8858 /* ContentView.swift */,
+				CE47667724004E8E006F8858 /* ContentViewModel.swift */,
 				CE4766692400460B006F8858 /* Assets.xcassets */,
 				CE47666E2400460B006F8858 /* LaunchScreen.storyboard */,
 				CE4766712400460B006F8858 /* Info.plist */,
@@ -75,6 +121,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CE47667E24005485006F8858 /* HomeWork8SharedExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CE47668D24005773006F8858 /* HomeWork8SharedExtension.entitlements */,
+				CE47667F24005485006F8858 /* ShareViewController.swift */,
+				CE47668124005485006F8858 /* MainInterface.storyboard */,
+				CE47668424005485006F8858 /* Info.plist */,
+			);
+			path = HomeWork8SharedExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,15 +142,34 @@
 				CE47665C24004605006F8858 /* Sources */,
 				CE47665D24004605006F8858 /* Frameworks */,
 				CE47665E24004605006F8858 /* Resources */,
+				CE47668B24005485006F8858 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE47668624005485006F8858 /* PBXTargetDependency */,
 			);
 			name = HomeWork8;
 			productName = HomeWork8;
 			productReference = CE47666024004605006F8858 /* HomeWork8.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CE47667C24005485006F8858 /* HomeWork8SharedExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE47668824005485006F8858 /* Build configuration list for PBXNativeTarget "HomeWork8SharedExtension" */;
+			buildPhases = (
+				CE47667924005485006F8858 /* Sources */,
+				CE47667A24005485006F8858 /* Frameworks */,
+				CE47667B24005485006F8858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeWork8SharedExtension;
+			productName = HomeWork8SharedExtension;
+			productReference = CE47667D24005485006F8858 /* HomeWork8SharedExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +182,9 @@
 				ORGANIZATIONNAME = OtusCourse;
 				TargetAttributes = {
 					CE47665F24004605006F8858 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					CE47667C24005485006F8858 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -124,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				CE47665F24004605006F8858 /* HomeWork8 */,
+				CE47667C24005485006F8858 /* HomeWork8SharedExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +219,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE47667B24005485006F8858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE47668324005485006F8858 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,13 +234,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE47667824004E8E006F8858 /* ContentViewModel.swift in Sources */,
 				CE47666424004605006F8858 /* AppDelegate.swift in Sources */,
 				CE47666624004606006F8858 /* SceneDelegate.swift in Sources */,
 				CE47666824004606006F8858 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE47667924005485006F8858 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE47668024005485006F8858 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE47668624005485006F8858 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE47667C24005485006F8858 /* HomeWork8SharedExtension */;
+			targetProxy = CE47668524005485006F8858 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE47666E2400460B006F8858 /* LaunchScreen.storyboard */ = {
@@ -161,6 +266,14 @@
 				CE47666F2400460B006F8858 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE47668124005485006F8858 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE47668224005485006F8858 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,9 +396,13 @@
 		CE4766752400460B006F8858 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = HomeWork8/HomeWork8.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeWork8/Preview Content\"";
+				DEVELOPMENT_TEAM = X7D489KH4Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HomeWork8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OtusCourse.HomeWork8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OtusHomeWork8;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,9 +420,13 @@
 		CE4766762400460B006F8858 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = HomeWork8/HomeWork8.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeWork8/Preview Content\"";
+				DEVELOPMENT_TEAM = X7D489KH4Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HomeWork8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +435,51 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = OtusCourse.HomeWork8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OtusHomeWork8;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE47668924005485006F8858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HomeWork8SharedExtension/HomeWork8SharedExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X7D489KH4Q;
+				INFOPLIST_FILE = HomeWork8SharedExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = OtusCourse.HomeWork8.HomeWork8SharedExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OtusHomeWork8SharedExtension;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE47668A24005485006F8858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = HomeWork8SharedExtension/HomeWork8SharedExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X7D489KH4Q;
+				INFOPLIST_FILE = HomeWork8SharedExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = OtusCourse.HomeWork8.HomeWork8SharedExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = OtusHomeWork8SharedExtension;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +502,15 @@
 			buildConfigurations = (
 				CE4766752400460B006F8858 /* Debug */,
 				CE4766762400460B006F8858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE47668824005485006F8858 /* Build configuration list for PBXNativeTarget "HomeWork8SharedExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE47668924005485006F8858 /* Debug */,
+				CE47668A24005485006F8858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

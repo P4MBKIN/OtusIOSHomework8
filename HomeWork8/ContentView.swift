@@ -22,7 +22,9 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             Spacer()
-            Text(vm.sharedText).font(.largeTitle)
+            Text(vm.sharedText).font(.headline).foregroundColor(.orange)
+            Spacer()
+            Text(vm.outputText).font(.body)
             Spacer()
         }
         .padding()

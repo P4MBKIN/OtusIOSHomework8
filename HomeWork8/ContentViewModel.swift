@@ -10,12 +10,29 @@ import SwiftUI
 
 class ContentViewModel: ObservableObject {
     
-    @Published var sharedText: String = "Your shared text (time: ISO 8601 in format: yyyy-MM-dd'T'HH:mm:ss or ...)"
-    @Published var outputText: String = "Your analyzed text in selected language"
+    @Published var sharedText: String = "Text" {
+        didSet {
+            print("tuturu")
+        }
+    }
+    @Published var outputText: String = "Text"
     @Published var selectedIndex: Int = 0 {
         didSet {
             print(selectedIndex)
         }
     }
     @Published var languages: [String] = ["en-US", "fr", "zh"]
+    
+    private let suiteName: String = "group.OtusCourse.HomeWork8"
+    
+    init() {
+        getTextFromUserDefaults(suiteName: suiteName)
+    }
+    
+    private func getTextFromUserDefaults(suiteName: String) {
+        if let prefs = UserDefaults(suiteName: suiteName) {
+            sharedText = prefs.string(forKey: "String") ?? "Text"
+            prefs.removeObject(forKey: "String")
+        }
+    }
 }

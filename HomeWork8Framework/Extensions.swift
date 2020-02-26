@@ -12,7 +12,7 @@ public extension String {
     
     func isContainDate() -> Bool {
         guard !self.isEmpty else { return false }
-        let dateRegex = #"^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?$"#
+        let dateRegex = #"(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?"#
         return NSPredicate(format: "SELF MATCHES %@", dateRegex).evaluate(with: self)
         
 //        let formatter = DateFormatter()

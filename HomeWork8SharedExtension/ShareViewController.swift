@@ -24,7 +24,7 @@ class ShareViewController: SLComposeServiceViewController {
     
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
 
-        if let contentMessage = contentText, contentMessage.isContainDate() {
+        if let contentMessage = contentText, contentMessage.isContain(regex: Regexes.date) {
             saveTextToUserDefaults(suiteName: suiteName, dataString: contentMessage)
             runApp()
         } else {

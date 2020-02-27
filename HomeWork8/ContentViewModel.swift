@@ -7,21 +7,31 @@
 //
 
 import SwiftUI
+import HomeWork8Framework
+
+enum LanguageApp: String {
+    case en = "en_US"
+    case fr = "fr"
+    case zh = "zh"
+}
+
+extension LanguageApp: CaseIterable {}
 
 class ContentViewModel: ObservableObject {
     
     @Published var sharedText: String = "Text" {
         didSet {
-            print("tuturu")
+            updateOutputText()
         }
     }
-    @Published var outputText: String = "Text"
+    @Published var outputDateText: String = "Dates:"
+    @Published var outputUnitsText: String = "Units:"
     @Published var selectedIndex: Int = 0 {
         didSet {
-            print(selectedIndex)
+            updateOutputText()
         }
     }
-    @Published var languages: [String] = ["en-US", "fr", "zh"]
+    @Published var languages: [String] = LanguageApp.allCases.map{ $0.rawValue }
     
     private let suiteName: String = "group.OtusCourse.HomeWork8"
     
@@ -29,9 +39,15 @@ class ContentViewModel: ObservableObject {
         getTextFromUserDefaults(suiteName: suiteName)
     }
     
+    private func updateOutputText() {
+        let service = LocalizerService(locale: Locale(identifier: languages[selectedIndex]))
+        let dates = sharedText.parseData(regex: Regexes.date).map { service.localizeDate(from: $0) }
+        outputDateText = dates.reduce("Dates:") { $0 + "\n" + $1}
+    }
+    
     private func getTextFromUserDefaults(suiteName: String) {
-        if let prefs = UserDefaults(suiteName: suiteName) {
-            sharedText = prefs.string(forKey: "String") ?? "Text"
+        if let prefs = UserDefaults(suiteName: suiteName), let text = prefs.string(forKey: "String") {
+            sharedText = text
             prefs.removeObject(forKey: "String")
         }
     }

@@ -31,7 +31,8 @@ struct ContentView: View {
             Spacer()
             VStack {
                 Text("Your analyzed text in selected language:").font(.headline).foregroundColor(.orange)
-                Text(vm.outputText).font(.headline).foregroundColor(.gray)
+                Text(vm.outputDateText).font(.headline).foregroundColor(.gray).multilineTextAlignment(.center)
+                Text(vm.outputUnitsText).font(.headline).foregroundColor(.gray).multilineTextAlignment(.center)
             }
             Spacer()
         }

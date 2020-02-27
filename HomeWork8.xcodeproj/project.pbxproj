@@ -23,6 +23,7 @@
 		CE4766A2240595DD006F8858 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47668E24057F73006F8858 /* Extensions.swift */; };
 		CE4766A424059601006F8858 /* HomeWork8Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE476695240595C9006F8858 /* HomeWork8Framework.framework */; };
 		CE4766A524059601006F8858 /* HomeWork8Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE476695240595C9006F8858 /* HomeWork8Framework.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE4766AC2407E377006F8858 /* LocalizerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4766AB2407E377006F8858 /* LocalizerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		CE476695240595C9006F8858 /* HomeWork8Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeWork8Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE476697240595C9006F8858 /* HomeWork8Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeWork8Framework.h; sourceTree = "<group>"; };
 		CE476698240595C9006F8858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4766AB2407E377006F8858 /* LocalizerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				CE47666524004605006F8858 /* SceneDelegate.swift */,
 				CE47666724004606006F8858 /* ContentView.swift */,
 				CE47667724004E8E006F8858 /* ContentViewModel.swift */,
+				CE4766AB2407E377006F8858 /* LocalizerService.swift */,
 				CE4766692400460B006F8858 /* Assets.xcassets */,
 				CE47666E2400460B006F8858 /* LaunchScreen.storyboard */,
 				CE4766712400460B006F8858 /* Info.plist */,
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE47667824004E8E006F8858 /* ContentViewModel.swift in Sources */,
+				CE4766AC2407E377006F8858 /* LocalizerService.swift in Sources */,
 				CE47666424004605006F8858 /* AppDelegate.swift in Sources */,
 				CE47666624004606006F8858 /* SceneDelegate.swift in Sources */,
 				CE47666824004606006F8858 /* ContentView.swift in Sources */,

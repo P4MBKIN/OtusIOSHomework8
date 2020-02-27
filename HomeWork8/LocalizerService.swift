@@ -22,4 +22,15 @@ struct LocalizerService {
         }
         return "Unknown date"
     }
+    
+    func localizeMeasurement(from: String) -> String {
+        let numFormatter = NumberFormatter()
+        numFormatter.locale = Locale.current
+        numFormatter.numberStyle = .decimal
+        guard let length = numFormatter.number(from: from) else { return "Unknown length" }
+        let m = Measurement(value: length.doubleValue, unit: UnitLength.kilometers)
+        let lenFormatter = MeasurementFormatter()
+        lenFormatter.locale = locale
+        return lenFormatter.string(from: m)
+    }
 }

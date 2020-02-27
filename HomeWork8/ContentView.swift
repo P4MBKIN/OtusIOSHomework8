@@ -22,7 +22,7 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             Spacer()
-            Text("Hint: time: ISO 8601 in format: yyyy-MM-dd'T'HH:mm:ss or ...").font(.headline).foregroundColor(.orange)
+            Text("Hint: time: ISO 8601 in format: yyyy-MM-dd'T'HH:mm:ss or length in kilometers in format decimal number").font(.headline).foregroundColor(.orange)
             Spacer()
             VStack {
                 Text("Your shared text:").font(.headline).foregroundColor(.orange)
@@ -32,7 +32,7 @@ struct ContentView: View {
             VStack {
                 Text("Your analyzed text in selected language:").font(.headline).foregroundColor(.orange)
                 Text(vm.outputDateText).font(.headline).foregroundColor(.gray).multilineTextAlignment(.center)
-                Text(vm.outputUnitsText).font(.headline).foregroundColor(.gray).multilineTextAlignment(.center)
+                Text(vm.outputLengthText).font(.headline).foregroundColor(.gray).multilineTextAlignment(.center)
             }
             Spacer()
         }

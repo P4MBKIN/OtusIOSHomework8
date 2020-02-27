@@ -25,7 +25,7 @@ class ContentViewModel: ObservableObject {
         }
     }
     @Published var outputDateText: String = "Dates:"
-    @Published var outputUnitsText: String = "Units:"
+    @Published var outputLengthText: String = "Length:"
     @Published var selectedIndex: Int = 0 {
         didSet {
             updateOutputText()
@@ -42,7 +42,9 @@ class ContentViewModel: ObservableObject {
     private func updateOutputText() {
         let service = LocalizerService(locale: Locale(identifier: languages[selectedIndex]))
         let dates = sharedText.parseData(regex: Regexes.date).map { service.localizeDate(from: $0) }
+        let length = sharedText.parseData(regex: Regexes.length).map { service.localizeMeasurement(from: $0) }
         outputDateText = dates.reduce("Dates:") { $0 + "\n" + $1}
+        outputLengthText = length.reduce("Length:") { $0 + "\n" + $1}
     }
     
     private func getTextFromUserDefaults(suiteName: String) {
